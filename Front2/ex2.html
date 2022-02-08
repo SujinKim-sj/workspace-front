@@ -12,19 +12,76 @@
             height: 67px;
             background-image: url("./images/header_bg.png");
             background-repeat: repeat-x;
+            position: fixed;
+            top: 0px;
         }
 
         .nav_wrap {
-            background-color: skyblue;
             height: 67px;
-            width: 65%;
+            width: 60%;
             margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header_logo {
+            width: 132px;
+        }
+
+        .header_nav {
+            width: 400px;
+        }
+
+        .nav_container {
+            width: 100%;
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            padding: 0px;
+        }
+
+        .nav_container a {
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .nav_container a:hover {
+            color: orangered;
+        }
+
+        .header_sub {
+            width: 150px;
+
+
+        }
+
+        .header_sub > ul{
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            padding: 0px;
+        }
+
+
+        .header_sub a{
+            color: lightgray;
+            font-size: 12px;
+        }
+
+        .header_sub a:hover {
+            color: white;
+        }
+
+        .header_sub li:nth-child(2)::after{
+            content: "|";
+            color: gainsboro;
         }
 
         .main {
-            width: 65%;
-            height: 800px;
-            margin: 50px auto 75px auto;
+            width: 60%;
+            height: 1200px;
+            margin: 117px auto 75px auto;
 
             /*margin : 0 auto;
             margin-top: 50px;
@@ -32,13 +89,13 @@
         }
         
         .content1 {
-            height: 495px;
+            height: 700px;
             background-color: lightpink;
             margin: 0 auto;
         }
         
         .content2 {
-            height: 295px;
+            height: 500px;
             background-color: lavender;
             margin: 10px auto 10px auto;
         }
@@ -56,15 +113,46 @@
             background-color: aliceblue;
             margin: 0 auto;
         }
+        
+        .square {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            float: right;
+        }
 
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="nav_wrap"></div>
+        <div class="nav_wrap">
+            <div class="header_logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <div class="header_nav">
+                <ul class="nav_container">
+                    <li><a href="#">COMPANY</a></li>
+                    <li><a href="#">ARTISTS</a></li>
+                    <li><a href="#">PR CENTER</a></li>
+                    <li><a href="#">AUDITION</a></li>
+                </ul>
+            </div>
+
+            <div class="header_sub">
+                <ul>
+                    <li><a href="#">JOIN</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">KO</a></li>
+                    <li><a href="#">EN</a></li>
+                    <li><a href="#">JP</a></li>
+                </ul>
+
+            </div>
+        </div>
     </div>
 
     <div class="main">
+        <div class="square"></div>
         <div class="content1"></div>
         <div class="content2"></div>
     </div>
@@ -72,6 +160,8 @@
     <div class="footer">
         <div class="ft_wrap"></div>
     </div>
+
+    
 
 </body>
 </html>
